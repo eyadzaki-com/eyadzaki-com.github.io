@@ -1,0 +1,50 @@
+{
+  "name": "hero-gridle-desktop",
+  "version": "1.0.0",
+  "description": "Hero Gridle desktop application for Windows",
+  "main": "main.js",
+  "author": "Hero Gridle",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "check": "node --check main.js",
+    "dist": "electron-builder --win nsis --x64"
+  },
+  "devDependencies": {
+    "electron": "44.2.0",
+    "electron-builder": "26.15.3"
+  },
+  "build": {
+    "appId": "com.herogridle.desktop",
+    "productName": "Hero Gridle",
+    "asar": true,
+    "directories": {
+      "output": "dist",
+      "buildResources": "assets"
+    },
+    "files": [
+      "main.js",
+      "loading.html",
+      "offline.html"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "artifactName": "HeroGridle-Setup-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Hero Gridle",
+      "uninstallDisplayName": "Hero Gridle"
+    }
+  }
+}
