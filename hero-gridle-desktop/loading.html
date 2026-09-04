@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'">
+  <title>Hero Gridle</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font: 600 18px/1.5 system-ui, sans-serif;
+      background:
+        radial-gradient(circle at 18% 20%, #0077ff55, transparent 34%),
+        radial-gradient(circle at 82% 22%, #ff183c55, transparent 34%),
+        radial-gradient(circle at 22% 82%, #ed00bd44, transparent 32%),
+        radial-gradient(circle at 80% 80%, #ffbd0044, transparent 32%),
+        #020a12;
+    }
+    main { text-align: center; padding: 32px; }
+    .mark { display: grid; place-items: center; width: 128px; height: 128px; margin: auto; border-radius: 28px; background: linear-gradient(135deg, #08f, #e03 50%, #fc0); box-shadow: 0 0 48px #009dff66; font-size: 42px; font-weight: 900; }
+    h1 { margin: 20px 0 6px; letter-spacing: .08em; text-transform: uppercase; }
+    p { margin: 0; color: #a8bdd1; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="mark" aria-hidden="true">HG</div>
+    <h1>Hero Gridle</h1>
+    <p>Loading the game…</p>
+  </main>
+</body>
+</html>
